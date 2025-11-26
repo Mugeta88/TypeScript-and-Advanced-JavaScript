@@ -20,12 +20,20 @@ export class Product {
     }
 
     displayDetails(): string {
-        return `${this.title} with an ID of ${this.id}costs $${this.price} and has a description of: ${this.description}.`
+        return `
+        Product: ${this.title} 
+        ID: ${this.id} 
+        Price: $${this.price} 
+        Discount: ${this.discountPercentage}
+        `
     }
 
-    getPriceWithDiscount(quantity: number, taxRate: number): number{
-        let cost = (this.price * quantity) * this.discountPercentage;
-        let totalCost = cost * (1 + taxRate);
-        return totalCost;
+    getPriceWithDiscount(quantity: number = 1, taxRate: number = 0): string{
+        let discountAmount = this.price  * (this.discountPercentage / 100);
+        let discountPrice = this.price - discountAmount;
+        
+        let subtotal = discountPrice * quantity;
+        let total = subtotal * (1 + taxRate);
+        return total.toFixed(2);
     }
 }
