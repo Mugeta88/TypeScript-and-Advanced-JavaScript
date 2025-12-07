@@ -1,0 +1,8 @@
+## Reflection Questions
+* Working on this project helped me understand TypeScript and object-oriented programming in a much clearer way. When I first started, I wasn’t confident about classes, typing, or how everything connects across different files. I used TypeScript types for each property, and even though I made mistakes, the errors helped me understand what TypeScript expects.
+
+One of the biggest challenges I ran into was with the utility functions like calculateDiscount() and calculateTax(). At first, I kept getting errors saying I was passing too many arguments. I didn’t realize the problem was actually the way I had originally written the functions. Once I updated the function parameters to match how I was calling them in my main file, everything finally started working. 
+
+Another big challenge was working with asynchronous code. I had used fetch before, but using it together with async/await and TypeScript was new to me. I had to learn how to wrap everything in try/catch blocks so errors wouldn’t break the whole program. At first, I didn’t fully understand why errors needed to be rethrown or logged, but after testing failures, it made sense why this matters. Having proper error handling made my code feel more reliable.
+
+Overall, this project helped me understand how TypeScript can actually guide me toward writing cleaner and more organized code. I’m still learning, but now I feel more comfortable creating classes, calling methods, working with modules, and handling asynchronous functions. It was definitely challenging at times, but I learned a lot from fixing my mistakes and seeing the application come together piece by piece.
