@@ -2,10 +2,7 @@ import {Product} from "../models/Product2";
 
 
 
-export function calculateDiscount(product: Product): number {
-        let discountAmount = product.price  * (product.discountPercentage / 100);
-        return Number(discountAmount.toFixed(2));
-
-
+export function calculateDiscount(price: number, discountPercentage: number): number {
+        return Number((price * (discountPercentage / 100)).toFixed(2));
     }
 
